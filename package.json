@@ -1,0 +1,45 @@
+{
+  "name": "abc-dashboard",
+  "version": "1.0.0",
+  "description": "ABC Token Sale Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "start": "vudash",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "link": "node ./scripts/link.js"
+  },
+  "engines": {
+    "node": "=8.x"
+  },
+  "author": "Tho Nguyen",
+  "license": "MIT",
+  "dependencies": {
+    "@vudash/datasource-random": "^9.9.0",
+    "@vudash/datasource-rest": "^9.9.0",
+    "@vudash/transformer-map": "^9.9.0",
+    "@vudash/widget-chart": "^9.9.0",
+    "vudash": "^9.9.0",
+    "vudash-widget-ci": "^9.9.0",
+    "vudash-widget-gauge": "^9.9.0",
+    "vudash-widget-health": "^9.9.0",
+    "vudash-widget-progress": "^9.8.0",
+    "vudash-widget-statistic": "^9.9.0",
+    "vudash-widget-status": "^9.9.0",
+    "vudash-widget-time": "^9.9.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thochain/ICO-Dashboard.git"
+  },
+  "keywords": [
+    "erc20",
+    "ico",
+    "token",
+    "sale"
+  ],
+  "bugs": {
+    "url": "https://github.com/thochain/ICO-Dashboard/issues"
+  },
+  "homepage": "https://github.com/thochain/ICO-Dashboard#readme"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "ABC Token",
+  "layout": {
+    "columns": 6,
+    "rows": 3
+  },
+  "datasources": {
+    "datasource-eth-raised": { 
+      "module": "@vudash/datasource-rest",
+      "schedule": 30000,
+      "options": {
+        "url": "http://localhost:8080/0xc13e1eb2a3842ea2b734759e24e0c5479609b3dd/totalEtherHasBeenReceived",
+        "method": "get"
+      }
+    },
+    "datasource-abc-sold": { 
+      "module": "@vudash/datasource-rest",
+      "schedule": 30000,
+      "options": {
+        "url": "http://localhost:8080/0xf47d5247900f7c6e89f6f692b5b8ad67ba139d37/totalSupply",
+        "method": "get"
+      }
+    }
+  },
+  "widgets": [
+    {
+      "position": {
+        "x": 2,
+        "y": 0,
+        "w": 2,
+        "h": 1
+      },
+      "options": {
+        "description": "ETH Raised",
+        "format": "%d"
+      },
+      "widget": "vudash-widget-statistic",
+      "datasource": "datasource-eth-raised"
+    },
+    {
+      "position": {
+        "x": 2,
+        "y": 1,
+        "w": 2,
+        "h": 1
+      },
+      "options": {
+        "description": "ABC Sold",
+        "format": "%d"
+      },
+      "widget": "vudash-widget-statistic",
+      "datasource": "datasource-abc-sold"
+    }
+  ]
+}
